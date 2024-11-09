@@ -4,7 +4,7 @@ const cheerio = require('cheerio');
 const cors = require('cors');
 
 const app = express();
-const PORT = 4000;
+const port = process.env.PORT || 4000;
 
 app.use(cors({
     origin: 'http://localhost:3000'
@@ -64,6 +64,6 @@ app.get('/api/scrape', async (req, res) => {
     }
 });
 
-app.listen(PORT, () => {
-    console.log(`Server is running on http://localhost:${PORT}`);
+app.listen(port, () => {
+    console.log(`Server is running on http://localhost:${port}`);
 });
