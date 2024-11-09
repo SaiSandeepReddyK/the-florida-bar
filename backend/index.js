@@ -4,7 +4,7 @@ const cheerio = require('cheerio');
 const cors = require('cors');
 
 const app = express();
-const port = process.env.PORT || 4000;
+const port = process.env.PORT;
 
 app.use(cors({
     origin: 'http://localhost:3000'
